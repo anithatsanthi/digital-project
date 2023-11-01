@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>your name - portfolio</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin:0;
+                padding:0;
+                background-color:violet;
+            }
+            header{
+                background-color:blue;
+                color:brown;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;/* Add this */
+            }
+            .header-content h1{
+                font-size: 2.5rem;
+            }
+            /* add styles for the round profile picture */
+            .profile-picture{
+                width: 100px;/* Adjust the size as needed */
+                height: 100px;
+                border-radius: 75%;/* Create a circular shape */
+                object-fit: cover;
+                position: absolute;
+                top: 25px;
+                left: 75px;
+            }
+            nav{
+                background-color:aquamarine;
+                color:bisque;
+                text-align: center;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 10px;
+            }
+            nav ul li{
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul a{
+                text-decoration: none;
+                color:aliceblue;
+            }
+            .section-content{
+                background-color: bisque;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px black(0, 0, 0, 0, 1);
+            }
+             .download-button
+            {
+                background-color:azure;
+                color:brown;
+                padding:0.5rem 1rem;
+                text-decoration:none;
+                border-radius:20px;
+                display:inline-block;
+                margin-top:10px;
+            }
+            .download-button:hover{
+                background-color:bisque;
+            }
+            footer{
+                text-align:center;
+                padding:1rem 0;
+                background-color:aqua;
+                color:aquamarine;
+            }
+            ul{
+                list-style-type:lower-roman;
+                padding-left:20px;
+            }
+            </style>
+        </head>
+        <body>
+            <header>
+                <div class="header-content">
+                    <img src="c:\Users\anitha\Pictures\photo_2023-11-01_01-12-10.jpg" alt="your profile picture" class="profile-picture">
+                    <h1>AnithaThiyagaraj</h1>
+                    <p>college student</p>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <yli><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>        
+                </ul>
+            </nav> 
+
+            <section id="about">
+                <div class="Section-Content">
+                    <h2>About Me</h2>
+                    <p>Hello Everyon! This is AnithaThiyagaraj am a computer science student. </p
+                </div>
+            </section>
+
+            <section id="education">
+                <div class="section-content">
+                    <h2>Education</h2>
+                    <p>Manonmaniam sundaranar university-Bsc[computer science]</p>
+                </div>
+            </section>
+
+            <section id="Skills">
+                <div class="section-content">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning</li>
+                        <li>Html</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="section-content">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><a href="#">Project 1</a></li>
+                        <li><a href="#">Project 2</a></li>
+                        <!--Add more project links here-->
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="resume">
+                <center>
+                    <div class="section-content">
+                        <h2>Resume</h2>
+                        <a href="C:\naan mudhalvan\Resume.html"class="download-button">Download cv</a>
+                    </div>
+                </center>
+            </section>
+
+
+            <footer>
+                <p>&copy; 2023 anitha</p>
+            </footer>
+            
+            <script>
+
+                document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+                    anchor.addEventListner('click',function(e){
+                        e.preventDefault();
+
+                        const targetId=this.getAttribute('href').substring(1);
+                        const targetElement=document.getElementById(targetid);
+                        if(targetElement){
+                            window.scrollTo({
+                                top: targetElement.offsetTop,
+                                behaviour:'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </body>
+    </html>
+
+            
